@@ -1,0 +1,251 @@
+:root {
+  --green: green;
+  --cyan: #018DC8;
+  --red: #E74B3C;
+  --gray: gray;
+  --darkgreen: #006300;
+  --darkcyan: #0074a5;
+  --darkred: #b1392e;
+  --darkgray: #6b6b6b;
+  --white: #f7f7f7;
+  --sans-serif: Arial, Helvetica, sans-serif;
+  --serif: 'Times New Roman', Times, serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--sans-serif);
+}
+
+html {
+  background: var(--white);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header {
+  padding: 5rem 1rem 2rem;
+  position: relative;
+}
+
+.header__thumbnail:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #22222272;
+  z-index: 0;
+}
+
+.header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.header__content {
+  position: relative;
+  text-align: center;
+}
+
+.header__title {
+  font-size: 2rem;
+  font-family: var(--serif);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.header__subtitle {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.header__to-bottom {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  display: inline-block;
+  opacity: 0.5;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.header__to-bottom:hover {
+  opacity: 1;
+}
+
+.icon svg {
+  max-width: 35px;
+  max-height: 35px;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product__item {
+  width: calc(100% - 0.75rem);
+  padding: 1rem 2rem 3rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+}
+
+.product__technologie {
+  text-transform: uppercase;
+  display: inline-block;
+  top: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 2px 8px;
+  position: absolute;
+  background: var(--white);
+  font-weight: 600;
+  font-family: var(--serif);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.product__technologie--green {
+  color: var(--green);
+}
+
+.product__technologie--cyan {
+  color: var(--cyan);
+}
+
+.product__technologie--red {
+  color: var(--red);
+}
+
+.product__technologie--gray {
+  color: var(--gray);
+}
+
+.product__title {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.product__description {
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--darkgray);
+}
+
+.product__button {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 1rem;
+}
+
+.trademark {
+  font-size: 0.75rem;
+  vertical-align: top;
+  margin-left: -5px;
+}
+
+.button {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: var(--white);
+  display: inline-block;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.button--green {
+  background: var(--green);
+}
+
+.button--green:hover {
+  background: var(--darkgreen);
+}
+
+.button--cyan {
+  background: var(--cyan);
+}
+
+.button--cyan:hover {
+  background: var(--darkcyan);
+}
+
+.button--red {
+  background: var(--red);
+}
+
+.button--red:hover {
+  background: var(--darkred);
+}
+
+.button--gray {
+  background: var(--gray);
+}
+
+.button--gray:hover {
+  background: var(--darkgray);
+}
+
+@media (min-width: 480px) {
+  .product__item {
+    width: calc(50% - 0.75rem);
+  }
+  .header__title {
+    font-size: 4rem;
+  }
+  .header__subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    max-width: 768px;
+  }
+  .product__item {
+    width: calc(33% - 0.75rem);
+  }
+}
+
+@media (min-width: 1366px) {
+  .content {
+    max-width: 1024px;
+    padding: 1rem 3rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
